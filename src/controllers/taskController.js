@@ -36,6 +36,7 @@ const getAllTasks = async (req, res , next) => {
     }
 
     const tasks = await Task.find(filter).sort({ createdAt: -1 });
+    
     res.status(200).json({
       success: true,
       data: tasks,
