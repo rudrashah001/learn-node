@@ -1,3 +1,6 @@
+const User = require("../models/User");
+const errorHandler = require("../middleware/errorhandler");
+const status = require("statuses");
 // const getAllUsers = (req, res) => {
 //   res.status(200).json({ success: true, data: users });
 // };
@@ -10,6 +13,7 @@
 //   }
 //   res.status(200).json({ success: true, data: user });
 // };
+
 
 const getAllUsers = async (req, res, next) => {
   try {
